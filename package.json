@@ -1,0 +1,19 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/styles.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingWilsonA/WilsonAudoin_3_02092021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingWilsonA/WilsonAudoin_3_02092021/issues"
+  },
+  "homepage": "https://github.com/CodingWilsonA/WilsonAudoin_3_02092021#readme"
+}
