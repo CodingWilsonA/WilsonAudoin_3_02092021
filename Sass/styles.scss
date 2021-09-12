@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+$primary-clr: #9356DC;
+$secondary-clr: #FF79DA;
+$tertiary-clr: #99E2D0;
+$light-tert-clr: lighten($tertiary-clr, 15%);
+$lighter-tert-clr: lighten($tertiary-clr, 20%);
+
+* {
+    font-family: roboto, cursive;
+}
+
+body {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-family:  shrikhand, cursive;
+        font-size: 7.5vw;
+        margin: 0;
+        padding: 10px 0;
+    }
+}
+
+.loc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.5vw;
+    background-color: $light-tert-clr;
+    position: relative;
+    &__mark {
+        margin-right: 3vw;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        height: 6px;
+        background: linear-gradient($tertiary-clr, $light-tert-clr);
+    }
+}
+
+#intro {
+    background-color: $lighter-tert-clr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 50px;
+    h1 {
+        margin: 0;
+        width: 70%;
+        text-align: center;
+        font-size: 5vw;
+    }
+    h2 {
+        font-weight: lighter;
+        text-align: center;
+        font-size: 4vw;
+    }
+    button {
+        margin-top: 20px;
+        background: linear-gradient(350deg, $primary-clr, lighten($primary-clr, 15%));
+        border-radius: 50px;
+        border: none;
+        color: white;
+        padding: 20px 30px;
+        font-size: 4vw;
+        box-shadow: 0 0 15px 5px $tertiary-clr;
+        }
+}
+
+.container {
+    &__title {
+        margin: 50px 0 30px 30px;
+        font-size: 6vw;
+        &:last-of-type {
+            padding-top: 50px;
+        }
+    }
+    &:last-of-type {
+        background-color: $lighter-tert-clr;
+    }
+}
+
+.guide {   
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__step {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 80%;
+        margin-bottom: 25px;
+        padding: 15px 0;
+        background-color: $lighter-tert-clr;
+        border-radius: 30px;
+        box-shadow: 0 0 20px $tertiary-clr;
+        font-size: 4vw;
+        counter-increment: li;
+        &::before {
+            content: counter(li); 
+            color: white;
+            background-color: $primary-clr;
+            border-radius: 15px;
+            display: inline-block;
+            padding: .9vw 2vw;
+            margin-left: -13px;
+        }
+        &__icon {
+            margin: 0 30px;
+            color: darken($tertiary-clr, 35%);
+        }
+    }
+}
+
+.places {
+   &__card {
+       list-style: none;
+       padding: 0 0 30px 0;
+       margin: 0;
+       &__img--1 {
+            margin: 0 30px;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            position: relative;
+            height: 240px;
+            max-width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 62%;
+            }
+            p {
+                z-index: 1;
+                top: 0;
+                right: 0;
+                margin-right: 15px;
+                padding: 10px 10px;
+                position: absolute;
+                background-color: $tertiary-clr;
+                border-radius: 5px;
+            }     
+        }
+        &__img--2 {
+            height: 240px;
+            margin: 0 30px;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 62%;
+            }
+            p {
+                z-index: 1;
+                top: 0;
+                right: 0;
+                margin-right: 15px;
+                padding: 10px 10px;
+                position: absolute;
+                background-color: $tertiary-clr;
+                border-radius: 5px;
+            }     
+        }
+        &__img--3 {
+            height: 240px;
+            margin: 0 30px;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 62%;
+            }     
+        }
+        &__img--4 {
+            height: 240px;
+            margin: 0 30px;
+            border-radius: 15px 15px 0 0;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center 62%;
+            }     
+        }
+        &__info {
+            margin: 0 30px;
+            padding-left: 15px;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 0 10px 5px $light-tert-clr;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            &__txt {
+                h3{
+                    margin-bottom: 0;
+                }
+                p {
+                    margin-top: 5px;
+                }
+            }
+            &__icon {
+                margin-right: 20px;
+                font-size: 5vw;
+            }
+        }
+   } 
+}
+
+footer {
+    padding: 20px 0 20px 30px;
+    background-color: darken($tertiary-clr, 60%);
+    p {
+        margin: 0;
+        color: white;
+        padding: 0 0 10px 0;
+        i {
+            padding-right: 5px;
+        }
+        .fa-hands-helping {
+            font-size: 2vw;
+        }
+    }
+    p:first-child {
+        margin: 0;
+        padding-bottom: 20px;
+        font-family: shrikhand, cursive;
+        font-size: 4vw;
+    }
+}
