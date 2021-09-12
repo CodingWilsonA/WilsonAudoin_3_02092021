@@ -1,3 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  font-family: roboto, cursive;
+}
 
+body {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header p {
+  font-family: shrikhand, cursive;
+  font-size: 7.5vw;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.loc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5vw;
+  background-color: #d5f3eb;
+  position: relative;
+}
+.loc__mark {
+  margin-right: 3vw;
+}
+.loc::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 6px;
+  background: linear-gradient(#99E2D0, #d5f3eb);
+}
+
+#intro {
+  background-color: #e8f9f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 50px;
+}
+#intro h1 {
+  margin: 0;
+  width: 70%;
+  text-align: center;
+  font-size: 5vw;
+}
+#intro h2 {
+  font-weight: lighter;
+  text-align: center;
+  font-size: 4vw;
+}
+#intro button {
+  margin-top: 20px;
+  background: linear-gradient(350deg, #9356DC, #bc95e9);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  font-size: 4vw;
+  box-shadow: 0 0 15px 5px #99E2D0;
+}
+
+.container__title {
+  margin: 50px 0 30px 30px;
+  font-size: 6vw;
+}
+.container__title:last-of-type {
+  padding-top: 50px;
+}
+.container:last-of-type {
+  background-color: #e8f9f5;
+}
+
+.guide {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.guide__step {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 25px;
+  padding: 15px 0;
+  background-color: #e8f9f5;
+  border-radius: 30px;
+  box-shadow: 0 0 20px #99E2D0;
+  font-size: 4vw;
+  counter-increment: li;
+}
+.guide__step::before {
+  content: counter(li);
+  color: white;
+  background-color: #9356DC;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 0.9vw 2vw;
+  margin-left: -13px;
+}
+.guide__step__icon {
+  margin: 0 30px;
+  color: #2c9c81;
+}
+
+.places__card {
+  list-style: none;
+  padding: 0 0 30px 0;
+  margin: 0;
+}
+.places__card__img--1 {
+  margin: 0 30px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+  height: 240px;
+  max-width: 100%;
+}
+.places__card__img--1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+.places__card__img--1 p {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+  padding: 10px 10px;
+  position: absolute;
+  background-color: #99E2D0;
+  border-radius: 5px;
+}
+.places__card__img--2 {
+  height: 240px;
+  margin: 0 30px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+.places__card__img--2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+.places__card__img--2 p {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin-right: 15px;
+  padding: 10px 10px;
+  position: absolute;
+  background-color: #99E2D0;
+  border-radius: 5px;
+}
+.places__card__img--3 {
+  height: 240px;
+  margin: 0 30px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+.places__card__img--3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+.places__card__img--4 {
+  height: 240px;
+  margin: 0 30px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+}
+.places__card__img--4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+}
+.places__card__info {
+  margin: 0 30px;
+  padding-left: 15px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 0 10px 5px #d5f3eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.places__card__info__txt h3 {
+  margin-bottom: 0;
+}
+.places__card__info__txt p {
+  margin-top: 5px;
+}
+.places__card__info__icon {
+  margin-right: 20px;
+  font-size: 5vw;
+}
+
+footer {
+  padding: 20px 0 20px 30px;
+  background-color: #10392f;
+}
+footer p {
+  margin: 0;
+  color: white;
+  padding: 0 0 10px 0;
+}
+footer p i {
+  padding-right: 5px;
+}
+footer p .fa-hands-helping {
+  font-size: 2vw;
+}
+footer p:first-child {
+  margin: 0;
+  padding-bottom: 20px;
+  font-family: shrikhand, cursive;
+  font-size: 4vw;
+}
 
 /*# sourceMappingURL=style.css.map */
