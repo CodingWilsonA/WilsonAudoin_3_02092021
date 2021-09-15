@@ -3,6 +3,10 @@
 * {
   font-family: roboto, cursive;
 }
+* a {
+  text-decoration: none;
+  color: black;
+}
 
 body {
   margin: 0 auto;
@@ -235,7 +239,7 @@ footer p i {
 footer p .fa-hands-helping {
   font-size: 2vw;
 }
-footer p:first-child {
+footer > p {
   margin: 0;
   padding-bottom: 20px;
   font-family: shrikhand, cursive;
