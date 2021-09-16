@@ -7,8 +7,46 @@ $tertiary-clr: #99E2D0;
 $light-tert-clr: lighten($tertiary-clr, 15%);
 $lighter-tert-clr: lighten($tertiary-clr, 20%);
 
+@mixin home-img-display {
+    margin: 0 30px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 240px;
+    max-width: 100%;
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 62%;
+    }
+}
+
+@mixin new-restaurant-btn {
+    p {
+        z-index: 1;
+        top: 0;
+        right: 0;
+        margin-right: 15px;
+        padding: 10px 10px;
+        position: absolute;
+        background-color: $tertiary-clr;
+        border-radius: 5px;
+    }  
+}
+
+@mixin flex-center-x2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
     font-family: roboto, cursive;
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
 body {
@@ -16,9 +54,7 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-x2;
     p {
         font-family:  shrikhand, cursive;
         font-size: 7.5vw;
@@ -28,9 +64,7 @@ header {
 }
 
 .loc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center-x2;
     font-size: 4.5vw;
     background-color: $light-tert-clr;
     position: relative;
@@ -94,11 +128,9 @@ header {
 }
 
 .guide {   
-    padding: 0;
-    display: flex;
+    @include flex-center-x2;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
     &__step {
         display: flex;
         justify-content: left;
@@ -117,8 +149,8 @@ header {
             background-color: $primary-clr;
             border-radius: 15px;
             display: inline-block;
-            padding: .9vw 2vw;
-            margin-left: -13px;
+            padding: .8vw 2vw;
+            margin-left: -15px;
         }
         &__icon {
             margin: 0 30px;
@@ -129,84 +161,22 @@ header {
 
 .places {
    &__card {
-       list-style: none;
-       padding: 0 0 30px 0;
-       margin: 0;
-       &__img--1 {
-            margin: 0 30px;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
-            position: relative;
-            height: 240px;
-            max-width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center 62%;
-            }
-            p {
-                z-index: 1;
-                top: 0;
-                right: 0;
-                margin-right: 15px;
-                padding: 10px 10px;
-                position: absolute;
-                background-color: $tertiary-clr;
-                border-radius: 5px;
-            }     
+        list-style: none;
+        padding: 0 0 30px 0;
+        margin: 0;
+        &__img--1 {
+            @include home-img-display;
+            @include new-restaurant-btn;   
         }
         &__img--2 {
-            height: 240px;
-            margin: 0 30px;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
-            position: relative;
-            max-width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center 62%;
-            }
-            p {
-                z-index: 1;
-                top: 0;
-                right: 0;
-                margin-right: 15px;
-                padding: 10px 10px;
-                position: absolute;
-                background-color: $tertiary-clr;
-                border-radius: 5px;
-            }     
+            @include home-img-display;
+            @include new-restaurant-btn;    
         }
         &__img--3 {
-            height: 240px;
-            margin: 0 30px;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
-            position: relative;
-            max-width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center 62%;
-            }     
+            @include home-img-display;   
         }
         &__img--4 {
-            height: 240px;
-            margin: 0 30px;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
-            position: relative;
-            max-width: 100%;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center 62%;
-            }     
+            @include home-img-display;   
         }
         &__info {
             margin: 0 30px;
@@ -230,7 +200,7 @@ header {
                 font-size: 5vw;
             }
         }
-   } 
+    } 
 }
 
 footer {
@@ -247,7 +217,7 @@ footer {
             font-size: 2vw;
         }
     }
-    p:first-child {
+    &> p {
         margin: 0;
         padding-bottom: 20px;
         font-family: shrikhand, cursive;
