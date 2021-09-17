@@ -47,6 +47,9 @@ $lighter-tert-clr: lighten($tertiary-clr, 20%);
         text-decoration: none;
         color: black;
     }
+    li {
+        list-style: none;
+    }
 }
 
 body {
@@ -111,7 +114,7 @@ header {
         padding: 20px 30px;
         font-size: 4vw;
         box-shadow: 0 0 15px 5px $tertiary-clr;
-        }
+    }
 }
 
 .container {
@@ -161,7 +164,6 @@ header {
 
 .places {
    &__card {
-        list-style: none;
         padding: 0 0 30px 0;
         margin: 0;
         &__img--1 {
@@ -222,5 +224,106 @@ footer {
         padding-bottom: 20px;
         font-family: shrikhand, cursive;
         font-size: 4vw;
+    }
+}
+
+.rest-header {
+    a {
+        font-size: 5vw;
+        flex: 1;
+        margin-left: 30px;
+    }
+    p {
+        flex: 3;
+    }
+}
+
+figure {
+    z-index: -1;
+    position: relative;
+    margin: 0;
+    img {
+        width: 100%;
+    }
+}
+
+.rest-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $lighter-tert-clr;
+    border-radius: 40px 40px 0 0;
+    margin-top: -40px;
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 40px 20px 30px;
+        h2 {
+            margin: 0;
+            font-family: shrikhand, cursive;
+            font-size: 7vw;
+        }
+        i {
+            font-size: 7vw;
+        }
+    }
+    &__course {
+        color: darken($tertiary-clr, 50%);
+        margin: 50px 0 5px 30px;
+        font-size: 5vw;
+    }
+    &__divider {
+        height: 3px;
+        width: 60px;
+        background-color: $tertiary-clr;
+        margin-left: 30px;
+    }
+    &__menu {
+        margin: 0 30px;
+        padding: 0;
+        &__option {
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            border-radius: 20px;
+            box-shadow: 0 0 20px $tertiary-clr;
+            &> p {
+                align-self: flex-end;
+                padding-right: 30px;
+                font-size: 4vw;
+            }
+            &__txt {
+                padding-left: 20px;
+                h3 {
+                    margin: 15px 0 5px 0;
+                    font-size: 4.5vw;
+                }
+                p {
+                    font-size: 3.9vw;
+                    margin: 0 0 15px 0;
+                }
+            }
+        }
+    }
+    &__btn {
+        align-self: center;
+        width: 40%;
+        margin: 30px 0 60px 0;
+        background: linear-gradient(350deg, $primary-clr, lighten($primary-clr, 15%));
+        border-radius: 50px;
+        border: none;
+        color: white;
+        padding: 20px 30px;
+        font-size: 4vw;
+        box-shadow: 0 0 15px 5px $tertiary-clr;
+    }
+}
+
+#note-img {
+    img {
+        height: 330px;
+        object-fit: cover;
+        object-position: center;
     }
 }
