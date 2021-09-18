@@ -26,6 +26,11 @@ header p {
   margin: 0;
   padding: 10px 0;
 }
+@media screen and (min-width: 1020px) {
+  header p {
+    font-size: 5vw;
+  }
+}
 
 .loc {
   display: flex;
@@ -34,6 +39,11 @@ header p {
   font-size: 4.5vw;
   background-color: #d5f3eb;
   position: relative;
+}
+@media screen and (min-width: 1020px) {
+  .loc {
+    font-size: 3vw;
+  }
 }
 .loc__mark {
   margin-right: 3vw;
@@ -64,10 +74,25 @@ header p {
   text-align: center;
   font-size: 5vw;
 }
+@media screen and (min-width: 760px) {
+  #intro h1 {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  #intro h1 {
+    font-size: 3vw;
+  }
+}
 #intro h2 {
   font-weight: lighter;
   text-align: center;
   font-size: 4vw;
+}
+@media screen and (min-width: 1020px) {
+  #intro h2 {
+    font-size: 3vw;
+  }
 }
 #intro button {
   margin-top: 20px;
@@ -79,10 +104,32 @@ header p {
   font-size: 4vw;
   box-shadow: 0 0 15px 5px #99E2D0;
 }
+@media screen and (min-width: 1020px) {
+  #intro button {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #intro button {
+    font-size: 2.5vw;
+  }
+}
 
 .container__title {
   margin: 50px 0 30px 30px;
   font-size: 6vw;
+}
+@media screen and (min-width: 1020px) {
+  .container__title {
+    font-size: 4vw;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .container__title {
+    font-size: 3vw;
+    margin-left: 40px;
+  }
 }
 .container__title:last-of-type {
   padding-top: 50px;
@@ -98,6 +145,12 @@ header p {
   flex-direction: column;
   padding: 0;
 }
+@media screen and (min-width: 1020px) {
+  .guide {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .guide__step {
   display: flex;
   justify-content: left;
@@ -111,6 +164,22 @@ header p {
   font-size: 4vw;
   counter-increment: li;
 }
+@media screen and (min-width: 760px) {
+  .guide__step {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .guide__step {
+    font-size: 1.5vw;
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .guide__step {
+    width: 27%;
+  }
+}
 .guide__step::before {
   content: counter(li);
   color: white;
@@ -120,11 +189,54 @@ header p {
   padding: 0.8vw 2vw;
   margin-left: -15px;
 }
+@media screen and (min-width: 760px) {
+  .guide__step::before {
+    border-radius: 30px;
+    margin-left: -28px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .guide__step::before {
+    padding: 0.5vw 1vw;
+    margin-left: -17px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .guide__step::before {
+    margin-left: -23px;
+  }
+}
 .guide__step__icon {
   margin: 0 30px;
   color: #2c9c81;
 }
+@media screen and (min-width: 1020px) {
+  .guide__step__icon {
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .guide__step__icon {
+    margin: 0 30px;
+  }
+}
 
+@media screen and (min-width: 1020px) {
+  .places {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places a {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places a {
+    width: 25%;
+  }
+}
 .places__card {
   padding: 0 0 30px 0;
   margin: 0;
@@ -153,6 +265,21 @@ header p {
   background-color: #99E2D0;
   border-radius: 5px;
 }
+@media screen and (min-width: 760px) {
+  .places__card__img--1 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--1 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--1 {
+    height: 400px;
+  }
+}
 .places__card__img--2 {
   margin: 0 30px;
   border-radius: 15px 15px 0 0;
@@ -177,6 +304,21 @@ header p {
   background-color: #99E2D0;
   border-radius: 5px;
 }
+@media screen and (min-width: 760px) {
+  .places__card__img--2 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--2 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--2 {
+    height: 400px;
+  }
+}
 .places__card__img--3 {
   margin: 0 30px;
   border-radius: 15px 15px 0 0;
@@ -190,6 +332,21 @@ header p {
   height: 100%;
   object-fit: cover;
   object-position: center 62%;
+}
+@media screen and (min-width: 760px) {
+  .places__card__img--3 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--3 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--3 {
+    height: 400px;
+  }
 }
 .places__card__img--4 {
   margin: 0 30px;
@@ -205,6 +362,21 @@ header p {
   object-fit: cover;
   object-position: center 62%;
 }
+@media screen and (min-width: 760px) {
+  .places__card__img--4 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--4 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--4 {
+    height: 400px;
+  }
+}
 .places__card__info {
   margin: 0 30px;
   padding-left: 15px;
@@ -218,22 +390,56 @@ header p {
 .places__card__info__txt h3 {
   margin-bottom: 0;
 }
+@media screen and (min-width: 1400px) {
+  .places__card__info__txt h3 {
+    font-size: 1.2vw;
+  }
+}
 .places__card__info__txt p {
   margin-top: 5px;
+}
+@media screen and (min-width: 1400px) {
+  .places__card__info__txt p {
+    font-size: 1.2vw;
+  }
 }
 .places__card__info__icon {
   margin-right: 20px;
   font-size: 5vw;
+}
+@media screen and (min-width: 1020px) {
+  .places__card__info__icon {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__info__icon {
+    font-size: 3vw;
+  }
 }
 
 footer {
   padding: 20px 0 20px 30px;
   background-color: #10392f;
 }
+@media screen and (min-width: 1020px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+}
 footer p {
   margin: 0;
   color: white;
   padding: 0 0 10px 0;
+}
+@media screen and (min-width: 1020px) {
+  footer p {
+    margin-right: 50px;
+    font-size: 1.6vw;
+  }
 }
 footer p i {
   padding-right: 5px;
@@ -241,20 +447,52 @@ footer p i {
 footer p .fa-hands-helping {
   font-size: 2vw;
 }
+@media screen and (min-width: 1020px) {
+  footer p .fa-hands-helping {
+    font-size: 1.2vw;
+  }
+}
 footer > p {
   margin: 0;
   padding-bottom: 20px;
   font-family: shrikhand, cursive;
   font-size: 4vw;
 }
+@media screen and (min-width: 1020px) {
+  footer > p {
+    margin-right: 50px;
+  }
+}
 
+/*Menus settings*/
 .rest-header a {
   font-size: 5vw;
   flex: 1;
   margin-left: 30px;
 }
+@media screen and (min-width: 760px) {
+  .rest-header a {
+    flex: 2;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-header a {
+    margin-left: 80px;
+  }
+}
 .rest-header p {
   flex: 3;
+}
+@media screen and (min-width: 760px) {
+  .rest-header p {
+    flex: 6;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-header p {
+    flex: 4;
+  }
 }
 
 figure {
@@ -262,8 +500,29 @@ figure {
   position: relative;
   margin: 0;
 }
+@media screen and (min-width: 760px) {
+  figure {
+    height: 500px;
+  }
+}
 figure img {
   width: 100%;
+}
+@media screen and (min-width: 760px) {
+  figure img {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  figure img {
+    object-fit: cover;
+    object-position: center 95%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  figure img {
+    object-position: center 70%;
+  }
 }
 
 .rest-container {
@@ -284,13 +543,33 @@ figure img {
   font-family: shrikhand, cursive;
   font-size: 7vw;
 }
+@media screen and (min-width: 760px) {
+  .rest-container__heading h2 {
+    font-size: 6vw;
+  }
+}
 .rest-container__heading i {
   font-size: 7vw;
+}
+@media screen and (min-width: 760px) {
+  .rest-container__heading i {
+    font-size: 5vw;
+  }
 }
 .rest-container__course {
   color: #1b6150;
   margin: 50px 0 5px 30px;
   font-size: 5vw;
+}
+@media screen and (min-width: 760px) {
+  .rest-container__course {
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__course {
+    font-size: 2vw;
+  }
 }
 .rest-container__divider {
   height: 3px;
@@ -298,9 +577,33 @@ figure img {
   background-color: #99E2D0;
   margin-left: 30px;
 }
+@media screen and (min-width: 760px) {
+  .rest-container__divider {
+    height: 5px;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__divider {
+    height: 4px;
+    width: 80px;
+  }
+}
 .rest-container__menu {
   margin: 0 30px;
   padding: 0;
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__menu--note {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 .rest-container__menu__option {
   background-color: white;
@@ -310,10 +613,25 @@ figure img {
   border-radius: 20px;
   box-shadow: 0 0 20px #99E2D0;
 }
+@media screen and (min-width: 1020px) {
+  .rest-container__menu__option {
+    width: 32%;
+  }
+}
 .rest-container__menu__option > p {
   align-self: flex-end;
   padding-right: 30px;
   font-size: 4vw;
+}
+@media screen and (min-width: 760px) {
+  .rest-container__menu__option > p {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__menu__option > p {
+    font-size: 1.5vw;
+  }
 }
 .rest-container__menu__option__txt {
   padding-left: 20px;
@@ -322,9 +640,29 @@ figure img {
   margin: 15px 0 5px 0;
   font-size: 4.5vw;
 }
+@media screen and (min-width: 760px) {
+  .rest-container__menu__option__txt h3 {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__menu__option__txt h3 {
+    font-size: 1.3vw;
+  }
+}
 .rest-container__menu__option__txt p {
   font-size: 3.9vw;
   margin: 0 0 15px 0;
+}
+@media screen and (min-width: 760px) {
+  .rest-container__menu__option__txt p {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__menu__option__txt p {
+    font-size: 1.3vw;
+  }
 }
 .rest-container__btn {
   align-self: center;
@@ -338,11 +676,29 @@ figure img {
   font-size: 4vw;
   box-shadow: 0 0 15px 5px #99E2D0;
 }
+@media screen and (min-width: 1020px) {
+  .rest-container__btn {
+    font-size: 3vw;
+    width: 30%;
+    margin-top: 50px;
+  }
+}
 
 #note-img img {
   height: 330px;
   object-fit: cover;
   object-position: center;
+}
+@media screen and (min-width: 760px) {
+  #note-img img {
+    height: 100%;
+    object-position: center 65%;
+  }
+}
+@media screen and (min-width: 1020px) {
+  #note-img img {
+    object-position: center 15%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
