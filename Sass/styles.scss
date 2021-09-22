@@ -63,6 +63,9 @@ header {
         font-size: 7.5vw;
         margin: 0;
         padding: 10px 0;
+        @media screen and (min-width:1020px) {
+            font-size: 5vw;
+        }
     }
 }
 
@@ -71,6 +74,9 @@ header {
     font-size: 4.5vw;
     background-color: $light-tert-clr;
     position: relative;
+    @media screen and (min-width:1020px) {
+        font-size: 3vw;
+    }
     &__mark {
         margin-right: 3vw;
     }
@@ -99,11 +105,20 @@ header {
         width: 70%;
         text-align: center;
         font-size: 5vw;
+        @media screen and (min-width:760px) {
+            width: 60%;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 3vw;
+        }
     }
     h2 {
         font-weight: lighter;
         text-align: center;
         font-size: 4vw;
+        @media screen and (min-width:1020px) {
+            font-size: 3vw;
+        }
     }
     button {
         margin-top: 20px;
@@ -114,6 +129,12 @@ header {
         padding: 20px 30px;
         font-size: 4vw;
         box-shadow: 0 0 15px 5px $tertiary-clr;
+        @media screen and (min-width:1020px) {
+            font-size: 3vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 2.5vw;
+        }
     }
 }
 
@@ -121,6 +142,14 @@ header {
     &__title {
         margin: 50px 0 30px 30px;
         font-size: 6vw;
+        @media screen and (min-width:1020px) {
+            font-size: 4vw;
+            margin-bottom: 50px;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 3vw;
+            margin-left: 40px;
+        }
         &:last-of-type {
             padding-top: 50px;
         }
@@ -134,6 +163,10 @@ header {
     @include flex-center-x2;
     flex-direction: column;
     padding: 0;
+    @media screen and (min-width:1020px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
     &__step {
         display: flex;
         justify-content: left;
@@ -146,6 +179,16 @@ header {
         box-shadow: 0 0 20px $tertiary-clr;
         font-size: 4vw;
         counter-increment: li;
+        @media screen and (min-width:760px) {
+            margin-bottom: 40px;;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 1.5vw;
+            width: 25%;
+        }
+        @media screen and (min-width:1400px) {
+            width: 27%;
+        }
         &::before {
             content: counter(li); 
             color: white;
@@ -154,31 +197,79 @@ header {
             display: inline-block;
             padding: .8vw 2vw;
             margin-left: -15px;
+            @media screen and (min-width:760px) {
+                border-radius: 30px;
+                margin-left: -28px;
+            }
+            @media screen and (min-width:1020px) {
+                padding: .5vw 1vw;
+                margin-left: -17px;
+            }
+            @media screen and (min-width:1400px) {
+                margin-left: -23px;
+            }
         }
         &__icon {
             margin: 0 30px;
             color: darken($tertiary-clr, 35%);
+            @media screen and (min-width:1020px) {
+                margin: 0 20px;
+            }
+            @media screen and (min-width:1400px) {
+                margin: 0 30px;
+            }
         }
     }
 }
 
 .places {
-   &__card {
+    @media screen and (min-width:1020px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a {
+        @media screen and (min-width:1020px) {
+            width: 50%;
+        }
+        @media screen and (min-width:1400px) {
+            width: 25%;
+        }
+    }
+    &__card {
         padding: 0 0 30px 0;
         margin: 0;
-        &__img--1 {
-            @include home-img-display;
-            @include new-restaurant-btn;   
-        }
-        &__img--2 {
-            @include home-img-display;
-            @include new-restaurant-btn;    
-        }
-        &__img--3 {
-            @include home-img-display;   
-        }
-        &__img--4 {
-            @include home-img-display;   
+        /*img modifier creation loop*/
+        $i: 1;
+        @while $i < 5 {
+            @if $i < 3 {
+                &__img--#{$i} {
+                    @include home-img-display;
+                    @include new-restaurant-btn;
+                    @media screen and (min-width:760px) {
+                        height: 400px;
+                    }
+                    @media screen and (min-width:1020px) {
+                        height: 300px;
+                    }
+                    @media screen and (min-width:1400px) {
+                        height: 400px;
+                    }
+                }
+            } @else {
+                &__img--#{$i} {
+                    @include home-img-display;
+                    @media screen and (min-width:760px) {
+                    height: 400px;
+                    }
+                    @media screen and (min-width:1020px) {
+                        height: 300px;
+                    }
+                    @media screen and (min-width:1400px) {
+                        height: 400px;
+                    }
+                }
+            }
+            $i: $i + 1;
         }
         &__info {
             margin: 0 30px;
@@ -192,14 +283,26 @@ header {
             &__txt {
                 h3{
                     margin-bottom: 0;
+                    @media screen and (min-width:1400px) {
+                        font-size: 1.2vw;
+                    }
                 }
                 p {
                     margin-top: 5px;
+                    @media screen and (min-width:1400px) {
+                        font-size: 1.2vw;
+                    }
                 }
             }
             &__icon {
                 margin-right: 20px;
                 font-size: 5vw;
+                @media screen and (min-width:1020px) {
+                    font-size: 4vw;
+                }
+                @media screen and (min-width:1400px) {
+                    font-size: 3vw;
+                }
             }
         }
     } 
@@ -208,15 +311,28 @@ header {
 footer {
     padding: 20px 0 20px 30px;
     background-color: darken($tertiary-clr, 60%);
+    @media screen and (min-width:1020px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+    }
     p {
         margin: 0;
         color: white;
         padding: 0 0 10px 0;
+        @media screen and (min-width:1020px) {
+            margin-right: 50px;
+            font-size: 1.6vw;
+        }
         i {
             padding-right: 5px;
         }
         .fa-hands-helping {
             font-size: 2vw;
+            @media screen and (min-width:1020px) {
+                font-size: 1.2vw;
+            }
         }
     }
     &> p {
@@ -224,17 +340,35 @@ footer {
         padding-bottom: 20px;
         font-family: shrikhand, cursive;
         font-size: 4vw;
+        @media screen and (min-width:1020px) {
+            margin-right: 50px;
+        }
     }
 }
+
+/*Menus settings*/
 
 .rest-header {
     a {
         font-size: 5vw;
         flex: 1;
         margin-left: 30px;
+        @media screen and (min-width:760px) {
+            flex: 2;
+            margin-left: 50px;
+        }
+        @media screen and (min-width:1020px) {
+            margin-left: 80px;
+        }
     }
     p {
         flex: 3;
+        @media screen and (min-width:760px) {
+            flex: 6;
+        }
+        @media screen and (min-width:1020px) {
+            flex: 4;
+        }
     }
 }
 
@@ -242,8 +376,21 @@ figure {
     z-index: -1;
     position: relative;
     margin: 0;
+    @media screen and (min-width:760px) {
+        height: 500px;
+    }
     img {
         width: 100%;
+        @media screen and (min-width:760px) {
+            height: 100%;
+        }
+        @media screen and (min-width:1020px) {
+            object-fit: cover;
+            object-position: center 95%;
+        }
+        @media screen and (min-width:1400px) {
+            object-position: center 70%;
+        }
     }
 }
 
@@ -262,25 +409,55 @@ figure {
             margin: 0;
             font-family: shrikhand, cursive;
             font-size: 7vw;
+            @media screen and (min-width:760px) {
+                font-size: 6vw;
+            }
         }
         i {
             font-size: 7vw;
+            @media screen and (min-width:760px) {
+                font-size: 5vw;
+            }
         }
     }
     &__course {
         color: darken($tertiary-clr, 50%);
         margin: 50px 0 5px 30px;
         font-size: 5vw;
+        @media screen and (min-width:760px) {
+            font-size: 4vw;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 2vw;
+        }
     }
     &__divider {
         height: 3px;
         width: 60px;
         background-color: $tertiary-clr;
         margin-left: 30px;
+        @media screen and (min-width:760px) {
+            height: 5px;
+            width: 100px;
+        }
+        @media screen and (min-width:1020px) {
+            height: 4px;
+            width: 80px;
+        }
     }
     &__menu {
         margin: 0 30px;
         padding: 0;
+        @media screen and (min-width:1020px) {
+            display: flex;
+            justify-content: space-around;
+        }
+        &--note {
+            @media screen and (min-width:1020px) {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
         &__option {
             background-color: white;
             display: flex;
@@ -288,20 +465,41 @@ figure {
             margin: 20px 0;
             border-radius: 20px;
             box-shadow: 0 0 20px $tertiary-clr;
+            @media screen and (min-width:1020px) {
+                width: 32%;
+            }
             &> p {
                 align-self: flex-end;
                 padding-right: 30px;
                 font-size: 4vw;
+                @media screen and (min-width:760px) {
+                    font-size: 3vw;
+                }
+                @media screen and (min-width:1020px) {
+                    font-size: 1.5vw;
+                }
             }
             &__txt {
                 padding-left: 20px;
                 h3 {
                     margin: 15px 0 5px 0;
                     font-size: 4.5vw;
+                    @media screen and (min-width:760px) {
+                        font-size: 3vw;
+                    }
+                    @media screen and (min-width:1020px) {
+                        font-size: 1.3vw;
+                    }
                 }
                 p {
                     font-size: 3.9vw;
                     margin: 0 0 15px 0;
+                    @media screen and (min-width:760px) {
+                        font-size: 3vw;
+                    }
+                    @media screen and (min-width:1020px) {
+                        font-size: 1.3vw;
+                    }
                 }
             }
         }
@@ -317,6 +515,11 @@ figure {
         padding: 20px 30px;
         font-size: 4vw;
         box-shadow: 0 0 15px 5px $tertiary-clr;
+        @media screen and (min-width:1020px) {
+            font-size: 3vw;
+            width: 30%;
+            margin-top: 50px;
+        }
     }
 }
 
@@ -325,5 +528,12 @@ figure {
         height: 330px;
         object-fit: cover;
         object-position: center;
+        @media screen and (min-width:760px) {
+            height: 100%;
+            object-position: center 65%;
+        }
+        @media screen and (min-width:1020px) {
+            object-position: center 15%;
+        }
     }
 }
