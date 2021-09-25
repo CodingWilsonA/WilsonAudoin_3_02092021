@@ -14,6 +14,15 @@ $lighter-tert-clr: lighten($tertiary-clr, 20%);
     position: relative;
     height: 240px;
     max-width: 100%;
+    @media screen and (min-width:760px) {
+        height: 400px;
+    }
+    @media screen and (min-width:1020px) {
+        height: 300px;
+    }
+    @media screen and (min-width:1400px) {
+        height: 400px;
+    }
     img {
     width: 100%;
     height: 100%;
@@ -43,6 +52,7 @@ $lighter-tert-clr: lighten($tertiary-clr, 20%);
 
 * {
     font-family: roboto, cursive;
+    box-sizing: border-box;
     a {
         text-decoration: none;
         color: black;
@@ -209,6 +219,12 @@ header {
                 margin-left: -23px;
             }
         }
+        &:hover {
+            background-color: lighten($primary-clr, 35%);
+            .guide__step__icon {
+                color: $primary-clr;
+            }
+        }
         &__icon {
             margin: 0 30px;
             color: darken($tertiary-clr, 35%);
@@ -227,46 +243,26 @@ header {
         display: flex;
         flex-wrap: wrap;
     }
-    a {
+    &__card {
+        padding: 0 0 30px 0;
+        margin: 0;
         @media screen and (min-width:1020px) {
             width: 50%;
         }
         @media screen and (min-width:1400px) {
             width: 25%;
         }
-    }
-    &__card {
-        padding: 0 0 30px 0;
-        margin: 0;
-        /*img modifier creation loop*/
+/*img modifier creation loop*/
         $i: 1;
         @while $i < 5 {
             @if $i < 3 {
                 &__img--#{$i} {
                     @include home-img-display;
                     @include new-restaurant-btn;
-                    @media screen and (min-width:760px) {
-                        height: 400px;
-                    }
-                    @media screen and (min-width:1020px) {
-                        height: 300px;
-                    }
-                    @media screen and (min-width:1400px) {
-                        height: 400px;
-                    }
                 }
             } @else {
                 &__img--#{$i} {
                     @include home-img-display;
-                    @media screen and (min-width:760px) {
-                    height: 400px;
-                    }
-                    @media screen and (min-width:1020px) {
-                        height: 300px;
-                    }
-                    @media screen and (min-width:1400px) {
-                        height: 400px;
-                    }
                 }
             }
             $i: $i + 1;
@@ -295,13 +291,71 @@ header {
                 }
             }
             &__icon {
-                margin-right: 20px;
-                font-size: 5vw;
+                width: 7vw;
+                margin: 0 20px 0 20px;
+                fill: transparent;
+                stroke: black;
+                stroke-width: 20;
+                cursor: pointer;
+                position: relative;
+                svg {
+                    overflow: visible;
+                    width: 7vw;
+                    @media screen and (min-width:1020px) {
+                        width: 4vw;
+                    }
+                    @media screen and (min-width:1400px) {
+                        width: 3vw;
+                    }
+                }
+                &__main:hover {
+                    path {
+                        animation: fill-animation 1000ms ease-in-out forwards;
+                    }
+                }
+                &__main:hover {
+                    .places__card__info__icon__background {
+                        path {
+                            animation: fill-animation 1000ms ease-in-out forwards;
+                        }
+                    }
+                }
+                @keyframes fill-animation {
+                    0% {
+                        fill: transparent;
+                        transform: scale(1);
+                      }
+                    30% {
+                        fill: transparent;
+                        transform: scale(1);
+                    }
+                    60% {
+                        fill: darken($secondary-clr, 20%);
+                        transform: scale(1.1);
+                        transform-origin: bottom;
+                        stroke: darken($secondary-clr, 20%);
+                    }
+                    90% {
+                        transform: scale(1);
+                    }
+                    100% {
+                        fill: darken($secondary-clr, 20%);
+                        transform: scale(1);
+                        stroke: darken($secondary-clr, 20%);
+                      }
+                }
+                &__background {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    z-index: -1;
+                    stroke: none;
+                }
                 @media screen and (min-width:1020px) {
-                    font-size: 4vw;
+                    width: 4vw;
                 }
                 @media screen and (min-width:1400px) {
-                    font-size: 3vw;
+                    width: 3vw;
                 }
             }
         }

@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 * {
   font-family: roboto, cursive;
+  box-sizing: border-box;
 }
 * a {
   text-decoration: none;
@@ -206,6 +207,12 @@ header p {
     margin-left: -23px;
   }
 }
+.guide__step:hover {
+  background-color: #f2eafb;
+}
+.guide__step:hover .guide__step__icon {
+  color: #9356DC;
+}
 .guide__step__icon {
   margin: 0 30px;
   color: #2c9c81;
@@ -227,20 +234,20 @@ header p {
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1020px) {
-  .places a {
-    width: 50%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .places a {
-    width: 25%;
-  }
-}
 .places__card {
   padding: 0 0 30px 0;
   margin: 0;
   /*img modifier creation loop*/
+}
+@media screen and (min-width: 1020px) {
+  .places__card {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card {
+    width: 25%;
+  }
 }
 .places__card__img--1 {
   margin: 0 30px;
@@ -249,6 +256,21 @@ header p {
   position: relative;
   height: 240px;
   max-width: 100%;
+}
+@media screen and (min-width: 760px) {
+  .places__card__img--1 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--1 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--1 {
+    height: 400px;
+  }
 }
 .places__card__img--1 img {
   width: 100%;
@@ -266,21 +288,6 @@ header p {
   background-color: #99E2D0;
   border-radius: 5px;
 }
-@media screen and (min-width: 760px) {
-  .places__card__img--1 {
-    height: 400px;
-  }
-}
-@media screen and (min-width: 1020px) {
-  .places__card__img--1 {
-    height: 300px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .places__card__img--1 {
-    height: 400px;
-  }
-}
 .places__card__img--2 {
   margin: 0 30px;
   border-radius: 15px 15px 0 0;
@@ -288,6 +295,21 @@ header p {
   position: relative;
   height: 240px;
   max-width: 100%;
+}
+@media screen and (min-width: 760px) {
+  .places__card__img--2 {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__img--2 {
+    height: 300px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__img--2 {
+    height: 400px;
+  }
 }
 .places__card__img--2 img {
   width: 100%;
@@ -305,21 +327,6 @@ header p {
   background-color: #99E2D0;
   border-radius: 5px;
 }
-@media screen and (min-width: 760px) {
-  .places__card__img--2 {
-    height: 400px;
-  }
-}
-@media screen and (min-width: 1020px) {
-  .places__card__img--2 {
-    height: 300px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .places__card__img--2 {
-    height: 400px;
-  }
-}
 .places__card__img--3 {
   margin: 0 30px;
   border-radius: 15px 15px 0 0;
@@ -328,12 +335,6 @@ header p {
   height: 240px;
   max-width: 100%;
 }
-.places__card__img--3 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 62%;
-}
 @media screen and (min-width: 760px) {
   .places__card__img--3 {
     height: 400px;
@@ -348,6 +349,12 @@ header p {
   .places__card__img--3 {
     height: 400px;
   }
+}
+.places__card__img--3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
 }
 .places__card__img--4 {
   margin: 0 30px;
@@ -357,12 +364,6 @@ header p {
   height: 240px;
   max-width: 100%;
 }
-.places__card__img--4 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 62%;
-}
 @media screen and (min-width: 760px) {
   .places__card__img--4 {
     height: 400px;
@@ -377,6 +378,12 @@ header p {
   .places__card__img--4 {
     height: 400px;
   }
+}
+.places__card__img--4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
 }
 .places__card__info {
   margin: 0 30px;
@@ -405,17 +412,73 @@ header p {
   }
 }
 .places__card__info__icon {
-  margin-right: 20px;
-  font-size: 5vw;
+  width: 7vw;
+  margin: 0 20px 0 20px;
+  fill: transparent;
+  stroke: black;
+  stroke-width: 20;
+  cursor: pointer;
+  position: relative;
+}
+.places__card__info__icon svg {
+  overflow: visible;
+  width: 7vw;
+}
+@media screen and (min-width: 1020px) {
+  .places__card__info__icon svg {
+    width: 4vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__info__icon svg {
+    width: 3vw;
+  }
+}
+.places__card__info__icon__main:hover path {
+  animation: fill-animation 1000ms ease-in-out forwards;
+}
+.places__card__info__icon__main:hover .places__card__info__icon__background path {
+  animation: fill-animation 1000ms ease-in-out forwards;
+}
+@keyframes fill-animation {
+  0% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  30% {
+    fill: transparent;
+    transform: scale(1);
+  }
+  60% {
+    fill: #ff13be;
+    transform: scale(1.1);
+    transform-origin: bottom;
+    stroke: #ff13be;
+  }
+  90% {
+    transform: scale(1);
+  }
+  100% {
+    fill: #ff13be;
+    transform: scale(1);
+    stroke: #ff13be;
+  }
+}
+.places__card__info__icon__background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
 }
 @media screen and (min-width: 1020px) {
   .places__card__info__icon {
-    font-size: 4vw;
+    width: 4vw;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__info__icon {
-    font-size: 3vw;
+    width: 3vw;
   }
 }
 
