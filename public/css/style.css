@@ -15,6 +15,11 @@
 body {
   margin: 0 auto;
 }
+@media screen and (min-width: 1400px) {
+  body {
+    margin: 0 180px;
+  }
+}
 
 header {
   display: flex;
@@ -27,9 +32,19 @@ header p {
   margin: 0;
   padding: 10px 0;
 }
+@media screen and (min-width: 760px) {
+  header p {
+    font-size: 4vw;
+  }
+}
 @media screen and (min-width: 1020px) {
   header p {
-    font-size: 5vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  header p {
+    font-size: 2.5vw;
   }
 }
 
@@ -41,13 +56,28 @@ header p {
   background-color: #d5f3eb;
   position: relative;
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 760px) {
   .loc {
     font-size: 3vw;
   }
 }
+@media screen and (min-width: 1020px) {
+  .loc {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .loc {
+    font-size: 1.5vw;
+  }
+}
 .loc__mark {
   margin-right: 3vw;
+}
+@media screen and (min-width: 1020px) {
+  .loc__mark {
+    margin-right: 1.5vw;
+  }
 }
 .loc::before {
   content: "";
@@ -78,11 +108,17 @@ header p {
 @media screen and (min-width: 760px) {
   #intro h1 {
     width: 60%;
+    font-size: 3vw;
   }
 }
 @media screen and (min-width: 1020px) {
   #intro h1 {
-    font-size: 3vw;
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #intro h1 {
+    font-size: 1.5vw;
   }
 }
 #intro h2 {
@@ -90,9 +126,19 @@ header p {
   text-align: center;
   font-size: 4vw;
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 760px) {
   #intro h2 {
     font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  #intro h2 {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #intro h2 {
+    font-size: 1.5vw;
   }
 }
 #intro button {
@@ -105,14 +151,19 @@ header p {
   font-size: 4vw;
   box-shadow: 0 0 15px 5px #99E2D0;
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 760px) {
   #intro button {
     font-size: 3vw;
   }
 }
+@media screen and (min-width: 1020px) {
+  #intro button {
+    font-size: 2vw;
+  }
+}
 @media screen and (min-width: 1400px) {
   #intro button {
-    font-size: 2.5vw;
+    font-size: 1.2vw;
   }
 }
 
@@ -120,16 +171,22 @@ header p {
   margin: 50px 0 30px 30px;
   font-size: 6vw;
 }
+@media screen and (min-width: 760px) {
+  .container__title {
+    font-size: 3vw;
+    margin: 20px 0 30px 60px;
+  }
+}
 @media screen and (min-width: 1020px) {
   .container__title {
-    font-size: 4vw;
-    margin-bottom: 50px;
+    margin: 10px 0 30px 30px;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 1400px) {
   .container__title {
-    font-size: 3vw;
-    margin-left: 40px;
+    font-size: 2vw;
+    margin-left: 30px;
   }
 }
 .container__title:last-of-type {
@@ -167,17 +224,20 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .guide__step {
-    margin-bottom: 40px;
+    width: 70%;
+    font-size: 3vw;
   }
 }
 @media screen and (min-width: 1020px) {
   .guide__step {
-    font-size: 1.5vw;
-    width: 25%;
+    font-size: 1.6vw;
+    padding: 10px 0;
+    width: 28%;
   }
 }
 @media screen and (min-width: 1400px) {
   .guide__step {
+    font-size: 1.2vw;
     width: 27%;
   }
 }
@@ -192,19 +252,21 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .guide__step::before {
+    padding: 0.8vw 1.8vw;
     border-radius: 30px;
-    margin-left: -28px;
+    margin-left: -25px;
   }
 }
 @media screen and (min-width: 1020px) {
   .guide__step::before {
-    padding: 0.5vw 1vw;
+    padding: 0.4vw 1vw;
     margin-left: -17px;
   }
 }
 @media screen and (min-width: 1400px) {
   .guide__step::before {
-    margin-left: -23px;
+    padding: 0.4vw 0.8vw;
+    margin-left: -16px;
   }
 }
 .guide__step:hover {
@@ -217,14 +279,14 @@ header p {
   margin: 0 30px;
   color: #2c9c81;
 }
+@media screen and (min-width: 760px) {
+  .guide__step__icon {
+    margin: 0 60px;
+  }
+}
 @media screen and (min-width: 1020px) {
   .guide__step__icon {
     margin: 0 20px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .guide__step__icon {
-    margin: 0 30px;
   }
 }
 
@@ -239,9 +301,15 @@ header p {
   margin: 0;
   /*img modifier creation loop*/
 }
+@media screen and (min-width: 760px) {
+  .places__card {
+    margin: 0 30px;
+  }
+}
 @media screen and (min-width: 1020px) {
   .places__card {
     width: 50%;
+    margin: 0;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -259,17 +327,17 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .places__card__img--1 {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1020px) {
   .places__card__img--1 {
-    height: 300px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__img--1 {
-    height: 400px;
+    height: 200px;
   }
 }
 .places__card__img--1 img {
@@ -298,17 +366,17 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .places__card__img--2 {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1020px) {
   .places__card__img--2 {
-    height: 300px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__img--2 {
-    height: 400px;
+    height: 200px;
   }
 }
 .places__card__img--2 img {
@@ -337,17 +405,17 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .places__card__img--3 {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1020px) {
   .places__card__img--3 {
-    height: 300px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__img--3 {
-    height: 400px;
+    height: 200px;
   }
 }
 .places__card__img--3 img {
@@ -366,17 +434,17 @@ header p {
 }
 @media screen and (min-width: 760px) {
   .places__card__img--4 {
-    height: 400px;
+    height: 300px;
   }
 }
 @media screen and (min-width: 1020px) {
   .places__card__img--4 {
-    height: 300px;
+    height: 250px;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__img--4 {
-    height: 400px;
+    height: 200px;
   }
 }
 .places__card__img--4 img {
@@ -398,17 +466,37 @@ header p {
 .places__card__info__txt h3 {
   margin-bottom: 0;
 }
+@media screen and (min-width: 760px) {
+  .places__card__info__txt h3 {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__info__txt h3 {
+    font-size: 1.5vw;
+  }
+}
 @media screen and (min-width: 1400px) {
   .places__card__info__txt h3 {
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 }
 .places__card__info__txt p {
   margin-top: 5px;
 }
+@media screen and (min-width: 760px) {
+  .places__card__info__txt p {
+    font-size: 2.5vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .places__card__info__txt p {
+    font-size: 1.5vw;
+  }
+}
 @media screen and (min-width: 1400px) {
   .places__card__info__txt p {
-    font-size: 1.2vw;
+    font-size: 1vw;
   }
 }
 .places__card__info__icon {
@@ -417,51 +505,69 @@ header p {
   fill: transparent;
   stroke: black;
   stroke-width: 20;
-  cursor: pointer;
   position: relative;
+}
+@media screen and (min-width: 1020px) {
+  .places__card__info__icon {
+    width: 4vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .places__card__info__icon {
+    width: 2vw;
+  }
+}
+.places__card__info__icon__box {
+  position: absolute;
+  cursor: pointer;
+  transform: scale(3);
+  margin: 10px 0 0 10px;
+  opacity: 0;
+}
+.places__card__info__icon__box:checked ~ .places__card__info__icon__main path {
+  animation: fill-animation 500ms ease-in-out forwards;
+}
+.places__card__info__icon__box:checked ~ .places__card__info__icon__main .places__card__info__icon__background path {
+  animation: fill-animation 500ms ease-in-out forwards;
 }
 .places__card__info__icon svg {
   overflow: visible;
   width: 7vw;
 }
+@media screen and (min-width: 760px) {
+  .places__card__info__icon svg {
+    width: 5vw;
+    margin-right: 0;
+  }
+}
 @media screen and (min-width: 1020px) {
   .places__card__info__icon svg {
-    width: 4vw;
+    width: 3.5vw;
   }
 }
 @media screen and (min-width: 1400px) {
   .places__card__info__icon svg {
-    width: 3vw;
+    width: 2vw;
   }
-}
-.places__card__info__icon__main:hover path {
-  animation: fill-animation 1000ms ease-in-out forwards;
-}
-.places__card__info__icon__main:hover .places__card__info__icon__background path {
-  animation: fill-animation 1000ms ease-in-out forwards;
 }
 @keyframes fill-animation {
   0% {
     fill: transparent;
     transform: scale(1);
   }
-  30% {
-    fill: transparent;
-    transform: scale(1);
-  }
-  60% {
-    fill: #ff13be;
+  40% {
+    fill: #9356DC;
     transform: scale(1.1);
     transform-origin: bottom;
-    stroke: #ff13be;
+    stroke: #9356DC;
   }
-  90% {
+  70% {
     transform: scale(1);
   }
   100% {
-    fill: #ff13be;
+    fill: #9356DC;
     transform: scale(1);
-    stroke: #ff13be;
+    stroke: #9356DC;
   }
 }
 .places__card__info__icon__background {
@@ -471,25 +577,15 @@ header p {
   z-index: -1;
   stroke: none;
 }
-@media screen and (min-width: 1020px) {
-  .places__card__info__icon {
-    width: 4vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .places__card__info__icon {
-    width: 3vw;
-  }
-}
 
 footer {
-  padding: 20px 0 20px 30px;
+  padding: 20px 0 20px 20px;
   background-color: #10392f;
 }
 @media screen and (min-width: 1020px) {
   footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-bottom: 10px;
   }
@@ -501,8 +597,12 @@ footer p {
 }
 @media screen and (min-width: 1020px) {
   footer p {
-    margin-right: 50px;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer p {
+    font-size: 1vw;
   }
 }
 footer p i {
@@ -513,18 +613,23 @@ footer p .fa-hands-helping {
 }
 @media screen and (min-width: 1020px) {
   footer p .fa-hands-helping {
-    font-size: 1.2vw;
+    font-size: 1.5vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  footer p .fa-hands-helping {
+    font-size: 1vw;
   }
 }
 footer > p {
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   font-family: shrikhand, cursive;
   font-size: 4vw;
 }
 @media screen and (min-width: 1020px) {
   footer > p {
-    margin-right: 50px;
+    font-size: 2vw;
   }
 }
 
@@ -536,13 +641,14 @@ footer > p {
 }
 @media screen and (min-width: 760px) {
   .rest-header a {
+    font-size: 3.5vw;
     flex: 2;
     margin-left: 50px;
   }
 }
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 1400px) {
   .rest-header a {
-    margin-left: 80px;
+    font-size: 2vw;
   }
 }
 .rest-header p {
@@ -550,12 +656,12 @@ footer > p {
 }
 @media screen and (min-width: 760px) {
   .rest-header p {
-    flex: 6;
+    flex: 3.5;
   }
 }
 @media screen and (min-width: 1020px) {
   .rest-header p {
-    flex: 4;
+    flex: 3;
   }
 }
 
@@ -566,7 +672,7 @@ figure {
 }
 @media screen and (min-width: 760px) {
   figure {
-    height: 500px;
+    height: 300px;
   }
 }
 figure img {
@@ -574,18 +680,14 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   figure img {
-    height: 100%;
-  }
-}
-@media screen and (min-width: 1020px) {
-  figure img {
+    max-height: 100%;
     object-fit: cover;
-    object-position: center 95%;
+    object-position: center 60%;
   }
 }
 @media screen and (min-width: 1400px) {
   figure img {
-    object-position: center 70%;
+    object-position: center 62%;
   }
 }
 
@@ -596,11 +698,21 @@ figure img {
   border-radius: 40px 40px 0 0;
   margin-top: -40px;
 }
+@media screen and (min-width: 760px) {
+  .rest-container {
+    border-radius: 0;
+  }
+}
 .rest-container__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 40px 20px 30px;
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__heading {
+    padding: 20px 40px 10px 30px;
+  }
 }
 .rest-container__heading h2 {
   margin: 0;
@@ -609,7 +721,17 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__heading h2 {
-    font-size: 6vw;
+    font-size: 4.5vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__heading h2 {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__heading h2 {
+    font-size: 2vw;
   }
 }
 .rest-container__heading i {
@@ -617,7 +739,17 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__heading i {
-    font-size: 5vw;
+    font-size: 4vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-container__heading i {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__heading i {
+    font-size: 2vw;
   }
 }
 .rest-container__course {
@@ -627,12 +759,19 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__course {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 @media screen and (min-width: 1020px) {
   .rest-container__course {
     font-size: 2vw;
+    margin: 20px 0 5px 20px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__course {
+    font-size: 1.2vw;
+    margin-left: 30px;
   }
 }
 .rest-container__divider {
@@ -643,8 +782,8 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__divider {
-    height: 5px;
-    width: 100px;
+    height: 3px;
+    width: 80px;
   }
 }
 @media screen and (min-width: 1020px) {
@@ -695,6 +834,12 @@ figure img {
 @media screen and (min-width: 1020px) {
   .rest-container__menu__option > p {
     font-size: 1.5vw;
+    padding: 0 15px 5px 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__menu__option > p {
+    font-size: 1vw;
   }
 }
 .rest-container__menu__option__txt {
@@ -706,12 +851,17 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__menu__option__txt h3 {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 1020px) {
   .rest-container__menu__option__txt h3 {
     font-size: 1.3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__menu__option__txt h3 {
+    font-size: 1vw;
   }
 }
 .rest-container__menu__option__txt p {
@@ -720,12 +870,17 @@ figure img {
 }
 @media screen and (min-width: 760px) {
   .rest-container__menu__option__txt p {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 }
 @media screen and (min-width: 1020px) {
   .rest-container__menu__option__txt p {
     font-size: 1.3vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-container__menu__option__txt p {
+    font-size: 1vw;
   }
 }
 .rest-container__btn {
@@ -740,10 +895,16 @@ figure img {
   font-size: 4vw;
   box-shadow: 0 0 15px 5px #99E2D0;
 }
+@media screen and (min-width: 760px) {
+  .rest-container__btn {
+    font-size: 2.5vw;
+    width: 30%;
+  }
+}
 @media screen and (min-width: 1020px) {
   .rest-container__btn {
-    font-size: 3vw;
-    width: 30%;
+    font-size: 1.5vw;
+    width: 20%;
     margin-top: 50px;
   }
 }
@@ -751,17 +912,12 @@ figure img {
 #note-img img {
   height: 330px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 70%;
 }
 @media screen and (min-width: 760px) {
   #note-img img {
     height: 100%;
-    object-position: center 65%;
-  }
-}
-@media screen and (min-width: 1020px) {
-  #note-img img {
-    object-position: center 15%;
+    object-position: center 20%;
   }
 }
 

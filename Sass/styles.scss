@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+ 
 $primary-clr: #9356DC;
 $secondary-clr: #FF79DA;
+$dark-second-clr: darken($secondary-clr, 30%);
 $tertiary-clr: #99E2D0;
 $light-tert-clr: lighten($tertiary-clr, 15%);
 $lighter-tert-clr: lighten($tertiary-clr, 20%);
@@ -15,13 +16,13 @@ $lighter-tert-clr: lighten($tertiary-clr, 20%);
     height: 240px;
     max-width: 100%;
     @media screen and (min-width:760px) {
-        height: 400px;
-    }
-    @media screen and (min-width:1020px) {
         height: 300px;
     }
+    @media screen and (min-width:1020px) {
+        height: 250px;
+    }
     @media screen and (min-width:1400px) {
-        height: 400px;
+        height: 200px;
     }
     img {
     width: 100%;
@@ -64,6 +65,9 @@ $lighter-tert-clr: lighten($tertiary-clr, 20%);
 
 body {
     margin: 0 auto;
+    @media screen and (min-width:1400px) {
+        margin: 0 180px;
+    }
 }
 
 header {
@@ -73,8 +77,14 @@ header {
         font-size: 7.5vw;
         margin: 0;
         padding: 10px 0;
+        @media screen and (min-width:760px) {
+            font-size: 4vw;
+        }
         @media screen and (min-width:1020px) {
-            font-size: 5vw;
+            font-size: 3vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 2.5vw;
         }
     }
 }
@@ -84,11 +94,20 @@ header {
     font-size: 4.5vw;
     background-color: $light-tert-clr;
     position: relative;
-    @media screen and (min-width:1020px) {
+    @media screen and (min-width:760px) {
         font-size: 3vw;
+    }
+    @media screen and (min-width:1020px) {
+        font-size: 2vw;
+    }
+    @media screen and (min-width:1400px) {
+        font-size: 1.5vw;
     }
     &__mark {
         margin-right: 3vw;
+        @media screen and (min-width:1020px) {
+            margin-right: 1.5vw;
+        }
     }
     &::before {
         content: '';
@@ -117,17 +136,27 @@ header {
         font-size: 5vw;
         @media screen and (min-width:760px) {
             width: 60%;
+            font-size: 3vw;
         }
         @media screen and (min-width:1020px) {
-            font-size: 3vw;
+            font-size: 2vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 1.5vw;
         }
     }
     h2 {
         font-weight: lighter;
         text-align: center;
         font-size: 4vw;
-        @media screen and (min-width:1020px) {
+        @media screen and (min-width:760px) {
             font-size: 3vw;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 2vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 1.5vw;
         }
     }
     button {
@@ -139,11 +168,14 @@ header {
         padding: 20px 30px;
         font-size: 4vw;
         box-shadow: 0 0 15px 5px $tertiary-clr;
-        @media screen and (min-width:1020px) {
+        @media screen and (min-width:760px) {
             font-size: 3vw;
         }
+        @media screen and (min-width:1020px) {
+            font-size: 2vw;
+        }
         @media screen and (min-width:1400px) {
-            font-size: 2.5vw;
+            font-size: 1.2vw;
         }
     }
 }
@@ -152,13 +184,17 @@ header {
     &__title {
         margin: 50px 0 30px 30px;
         font-size: 6vw;
+        @media screen and (min-width:760px) {
+            font-size: 3vw;
+            margin: 20px 0 30px 60px;
+        }
         @media screen and (min-width:1020px) {
-            font-size: 4vw;
-            margin-bottom: 50px;
+            margin: 10px 0 30px 30px;
+            font-size: 2.5vw;
         }
         @media screen and (min-width:1400px) {
-            font-size: 3vw;
-            margin-left: 40px;
+            font-size: 2vw;
+            margin-left: 30px;
         }
         &:last-of-type {
             padding-top: 50px;
@@ -190,13 +226,16 @@ header {
         font-size: 4vw;
         counter-increment: li;
         @media screen and (min-width:760px) {
-            margin-bottom: 40px;;
+            width: 70%;
+            font-size: 3vw;
         }
         @media screen and (min-width:1020px) {
-            font-size: 1.5vw;
-            width: 25%;
+            font-size: 1.6vw;
+            padding: 10px 0;
+            width: 28%;
         }
         @media screen and (min-width:1400px) {
+            font-size: 1.2vw;
             width: 27%;
         }
         &::before {
@@ -208,15 +247,17 @@ header {
             padding: .8vw 2vw;
             margin-left: -15px;
             @media screen and (min-width:760px) {
+                padding: .8vw 1.8vw;
                 border-radius: 30px;
-                margin-left: -28px;
+                margin-left: -25px;
             }
             @media screen and (min-width:1020px) {
-                padding: .5vw 1vw;
+                padding: .4vw 1vw;
                 margin-left: -17px;
             }
             @media screen and (min-width:1400px) {
-                margin-left: -23px;
+                padding: .4vw .8vw;
+                margin-left: -16px;
             }
         }
         &:hover {
@@ -228,11 +269,11 @@ header {
         &__icon {
             margin: 0 30px;
             color: darken($tertiary-clr, 35%);
+            @media screen and (min-width:760px) {
+                margin: 0 60px;
+            }
             @media screen and (min-width:1020px) {
                 margin: 0 20px;
-            }
-            @media screen and (min-width:1400px) {
-                margin: 0 30px;
             }
         }
     }
@@ -246,8 +287,12 @@ header {
     &__card {
         padding: 0 0 30px 0;
         margin: 0;
+        @media screen and (min-width:760px) {
+            margin: 0 30px;
+        }
         @media screen and (min-width:1020px) {
             width: 50%;
+            margin: 0;
         }
         @media screen and (min-width:1400px) {
             width: 25%;
@@ -279,14 +324,26 @@ header {
             &__txt {
                 h3{
                     margin-bottom: 0;
+                    @media screen and (min-width:760px) {
+                        font-size: 2.5vw;
+                    }
+                    @media screen and (min-width:1020px) {
+                        font-size: 1.5vw;
+                    }
                     @media screen and (min-width:1400px) {
-                        font-size: 1.2vw;
+                        font-size: 1vw;
                     }
                 }
                 p {
                     margin-top: 5px;
+                    @media screen and (min-width:760px) {
+                        font-size: 2.5vw;
+                    }
+                    @media screen and (min-width:1020px) {
+                        font-size: 1.5vw;
+                    }
                     @media screen and (min-width:1400px) {
-                        font-size: 1.2vw;
+                        font-size: 1vw;
                     }
                 }
             }
@@ -296,28 +353,46 @@ header {
                 fill: transparent;
                 stroke: black;
                 stroke-width: 20;
-                cursor: pointer;
                 position: relative;
+                @media screen and (min-width:1020px) {
+                    width: 4vw;
+                }
+                @media screen and (min-width:1400px) {
+                    width: 2vw;
+                }
+                &__box {
+                    position: absolute;
+                    cursor: pointer;
+                    transform: scale(3);
+                    margin: 10px 0 0 10px;
+                    opacity: 0;
+                    &:checked {
+                        &~.places__card__info__icon__main {
+                            path {
+                                animation: fill-animation 500ms ease-in-out forwards;
+                            }
+                        }
+                        &~.places__card__info__icon__main {
+                            .places__card__info__icon__background {
+                                path {
+                                    animation: fill-animation 500ms ease-in-out forwards;
+                                }
+                            }
+                        }
+                    }
+                }
                 svg {
                     overflow: visible;
                     width: 7vw;
+                    @media screen and (min-width:760px) {
+                        width: 5vw;
+                        margin-right: 0;
+                    }
                     @media screen and (min-width:1020px) {
-                        width: 4vw;
+                        width: 3.5vw;
                     }
                     @media screen and (min-width:1400px) {
-                        width: 3vw;
-                    }
-                }
-                &__main:hover {
-                    path {
-                        animation: fill-animation 1000ms ease-in-out forwards;
-                    }
-                }
-                &__main:hover {
-                    .places__card__info__icon__background {
-                        path {
-                            animation: fill-animation 1000ms ease-in-out forwards;
-                        }
+                        width: 2vw;
                     }
                 }
                 @keyframes fill-animation {
@@ -325,23 +400,19 @@ header {
                         fill: transparent;
                         transform: scale(1);
                       }
-                    30% {
-                        fill: transparent;
-                        transform: scale(1);
-                    }
-                    60% {
-                        fill: darken($secondary-clr, 20%);
+                    40% {
+                        fill: $primary-clr;
                         transform: scale(1.1);
                         transform-origin: bottom;
-                        stroke: darken($secondary-clr, 20%);
+                        stroke: $primary-clr;
                     }
-                    90% {
+                    70% {
                         transform: scale(1);
                     }
                     100% {
-                        fill: darken($secondary-clr, 20%);
+                        fill: $primary-clr;
                         transform: scale(1);
-                        stroke: darken($secondary-clr, 20%);
+                        stroke: $primary-clr;
                       }
                 }
                 &__background {
@@ -351,23 +422,17 @@ header {
                     z-index: -1;
                     stroke: none;
                 }
-                @media screen and (min-width:1020px) {
-                    width: 4vw;
-                }
-                @media screen and (min-width:1400px) {
-                    width: 3vw;
-                }
             }
         }
     } 
 }
 
 footer {
-    padding: 20px 0 20px 30px;
+    padding: 20px 0 20px 20px;
     background-color: darken($tertiary-clr, 60%);
     @media screen and (min-width:1020px) {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         padding-bottom: 10px;
     }
@@ -376,8 +441,10 @@ footer {
         color: white;
         padding: 0 0 10px 0;
         @media screen and (min-width:1020px) {
-            margin-right: 50px;
-            font-size: 1.6vw;
+            font-size: 1.2vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 1vw;
         }
         i {
             padding-right: 5px;
@@ -385,17 +452,20 @@ footer {
         .fa-hands-helping {
             font-size: 2vw;
             @media screen and (min-width:1020px) {
-                font-size: 1.2vw;
+                font-size: 1.5vw;
+            }
+            @media screen and (min-width:1400px) {
+                font-size: 1vw;
             }
         }
     }
     &> p {
         margin: 0;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         font-family: shrikhand, cursive;
         font-size: 4vw;
         @media screen and (min-width:1020px) {
-            margin-right: 50px;
+            font-size: 2vw;
         }
     }
 }
@@ -408,20 +478,21 @@ footer {
         flex: 1;
         margin-left: 30px;
         @media screen and (min-width:760px) {
+            font-size: 3.5vw;
             flex: 2;
             margin-left: 50px;
         }
-        @media screen and (min-width:1020px) {
-            margin-left: 80px;
+        @media screen and (min-width:1400px) {
+            font-size: 2vw;
         }
     }
     p {
         flex: 3;
         @media screen and (min-width:760px) {
-            flex: 6;
+            flex: 3.5;
         }
         @media screen and (min-width:1020px) {
-            flex: 4;
+            flex: 3;
         }
     }
 }
@@ -431,19 +502,17 @@ figure {
     position: relative;
     margin: 0;
     @media screen and (min-width:760px) {
-        height: 500px;
+        height: 300px;
     }
     img {
         width: 100%;
         @media screen and (min-width:760px) {
-            height: 100%;
-        }
-        @media screen and (min-width:1020px) {
+            max-height: 100%;
             object-fit: cover;
-            object-position: center 95%;
+            object-position: center 60%;
         }
         @media screen and (min-width:1400px) {
-            object-position: center 70%;
+            object-position: center 62%;
         }
     }
 }
@@ -454,23 +523,41 @@ figure {
     background-color: $lighter-tert-clr;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
+    @media screen and (min-width:760px) {
+        border-radius: 0;
+    }
     &__heading {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 40px 40px 20px 30px;
+        @media screen and (min-width:1020px) {
+            padding: 20px 40px 10px 30px;
+        }
         h2 {
             margin: 0;
             font-family: shrikhand, cursive;
             font-size: 7vw;
             @media screen and (min-width:760px) {
-                font-size: 6vw;
+                font-size: 4.5vw;
+            }
+            @media screen and (min-width:1020px) {
+                font-size: 3vw;
+            }
+            @media screen and (min-width:1400px) {
+                font-size: 2vw;
             }
         }
         i {
             font-size: 7vw;
             @media screen and (min-width:760px) {
-                font-size: 5vw;
+                font-size: 4vw;
+            }
+            @media screen and (min-width:1020px) {
+                font-size: 3vw;
+            }
+            @media screen and (min-width:1400px) {
+                font-size: 2vw;
             }
         }
     }
@@ -479,10 +566,15 @@ figure {
         margin: 50px 0 5px 30px;
         font-size: 5vw;
         @media screen and (min-width:760px) {
-            font-size: 4vw;
+            font-size: 3vw;
         }
         @media screen and (min-width:1020px) {
             font-size: 2vw;
+            margin: 20px 0 5px 20px;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 1.2vw;
+            margin-left: 30px;
         }
     }
     &__divider {
@@ -491,8 +583,8 @@ figure {
         background-color: $tertiary-clr;
         margin-left: 30px;
         @media screen and (min-width:760px) {
-            height: 5px;
-            width: 100px;
+            height: 3px;
+            width: 80px;
         }
         @media screen and (min-width:1020px) {
             height: 4px;
@@ -531,6 +623,10 @@ figure {
                 }
                 @media screen and (min-width:1020px) {
                     font-size: 1.5vw;
+                    padding: 0 15px 5px 0;
+                }
+                @media screen and (min-width:1400px) {
+                    font-size: 1vw;
                 }
             }
             &__txt {
@@ -539,20 +635,26 @@ figure {
                     margin: 15px 0 5px 0;
                     font-size: 4.5vw;
                     @media screen and (min-width:760px) {
-                        font-size: 3vw;
+                        font-size: 2.5vw;
                     }
                     @media screen and (min-width:1020px) {
                         font-size: 1.3vw;
+                    }
+                    @media screen and (min-width:1400px) {
+                        font-size: 1vw;
                     }
                 }
                 p {
                     font-size: 3.9vw;
                     margin: 0 0 15px 0;
                     @media screen and (min-width:760px) {
-                        font-size: 3vw;
+                        font-size: 2.5vw;
                     }
                     @media screen and (min-width:1020px) {
                         font-size: 1.3vw;
+                    }
+                    @media screen and (min-width:1400px) {
+                        font-size: 1vw;
                     }
                 }
             }
@@ -569,9 +671,13 @@ figure {
         padding: 20px 30px;
         font-size: 4vw;
         box-shadow: 0 0 15px 5px $tertiary-clr;
-        @media screen and (min-width:1020px) {
-            font-size: 3vw;
+        @media screen and (min-width:760px) {
+            font-size: 2.5vw;
             width: 30%;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 1.5vw;
+            width: 20%;
             margin-top: 50px;
         }
     }
@@ -581,13 +687,10 @@ figure {
     img {
         height: 330px;
         object-fit: cover;
-        object-position: center;
+        object-position: center 70%;
         @media screen and (min-width:760px) {
             height: 100%;
-            object-position: center 65%;
-        }
-        @media screen and (min-width:1020px) {
-            object-position: center 15%;
+            object-position: center 20%;
         }
     }
 }
