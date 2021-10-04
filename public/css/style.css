@@ -237,7 +237,7 @@ footer > p {
 }
 @media screen and (min-width: 760px) {
   #intro h1 {
-    width: 60%;
+    width: 70%;
     font-size: 3vw;
   }
 }
@@ -258,6 +258,7 @@ footer > p {
 }
 @media screen and (min-width: 760px) {
   #intro h2 {
+    width: 70%;
     font-size: 3vw;
   }
 }
@@ -416,7 +417,7 @@ footer > p {
 }
 .guide__step__icon {
   margin: 0 30px;
-  color: #2c9c81;
+  color: #4acbab;
 }
 @media screen and (min-width: 760px) {
   .guide__step__icon {
