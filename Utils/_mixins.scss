@@ -1,0 +1,42 @@
+@mixin home-img-display {
+    margin: 0 30px;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    position: relative;
+    height: 240px;
+    max-width: 100%;
+    @media screen and (min-width:760px) {
+        height: 300px;
+    }
+    @media screen and (min-width:1020px) {
+        height: 250px;
+    }
+    @media screen and (min-width:1400px) {
+        height: 200px;
+    }
+    img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 62%;
+    }
+}
+
+@mixin new-restaurant-btn {
+    p {
+        z-index: 1;
+        top: 0;
+        right: 0;
+        margin-right: 15px;
+        padding: 10px 10px;
+        position: absolute;
+        background-color: $tertiary-clr;
+        border-radius: 5px;
+    }  
+}
+
+@mixin flex-center-x2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
