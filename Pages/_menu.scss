@@ -284,11 +284,7 @@ figure {
         box-shadow: 0 0 15px 5px $tertiary-clr;
         opacity: 1;
         cursor: pointer;
-        &:hover {
-            opacity: 0.9;
-            box-shadow: 0 0 5px 5px $tertiary-clr;
-            transition: all 200ms ease-in-out;
-        }
+        @include btn-hover;
         @media screen and (min-width:760px) {
             font-size: 2.5vw;
             width: 30%;
