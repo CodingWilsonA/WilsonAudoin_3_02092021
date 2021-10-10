@@ -1,0 +1,31 @@
+figure {
+    z-index: -1;
+    position: relative;
+    margin: 0;
+    @media screen and (min-width:760px) {
+        height: 300px;
+    }
+    img {
+        width: 100%;
+        @media screen and (min-width:760px) {
+            max-height: 100%;
+            object-fit: cover;
+            object-position: center 60%;
+        }
+        @media screen and (min-width:1400px) {
+            object-position: center 62%;
+        }
+    }
+}
+
+#note-img {
+    img {
+        height: 330px;
+        object-fit: cover;
+        object-position: center 70%;
+        @media screen and (min-width:760px) {
+            height: 100%;
+            object-position: center 20%;
+        }
+    }
+}

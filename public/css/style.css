@@ -51,6 +51,37 @@ header p {
   }
 }
 
+.rest-header a {
+  font-size: 5vw;
+  flex: 1;
+  margin-left: 30px;
+}
+@media screen and (min-width: 760px) {
+  .rest-header a {
+    font-size: 3.5vw;
+    flex: 2;
+    margin-left: 50px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .rest-header a {
+    font-size: 2vw;
+  }
+}
+.rest-header p {
+  flex: 3;
+}
+@media screen and (min-width: 760px) {
+  .rest-header p {
+    flex: 3.5;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .rest-header p {
+    flex: 3;
+  }
+}
+
 footer {
   padding: 20px 0 20px 20px;
   background-color: #10392f;
@@ -106,78 +137,6 @@ footer > p {
   }
 }
 
-.loader {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 2;
-  background: #99E2D0;
-  animation: fade 3000ms ease-in-out forwards;
-}
-.loader__inner {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.loader__inner__content {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.loader__inner__content span {
-  width: 75px;
-  height: 75px;
-  display: inline-block;
-  border-width: 4px;
-  border-color: #FF79DA;
-  border-top-color: #9356DC;
-  animation: spin 3000ms ease-in-out forwards;
-  border-radius: 100%;
-  border-style: solid;
-}
-
-@keyframes fade {
-  0%, 20%, 40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0.8;
-  }
-  80% {
-    opacity: 0;
-    z-index: 2;
-  }
-  100% {
-    opacity: 0;
-    z-index: -2;
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(-360deg);
-  }
-  20% {
-    transform: rotate(0deg);
-  }
-  40% {
-    transform: rotate(360deg);
-  }
-  60% {
-    transform: rotate(1080deg);
-  }
-  80% {
-    transform: rotate(1440deg);
-  }
-  100% {
-    transform: rotate(1800deg);
-    z-index: -2;
-  }
-}
 .loc {
   display: flex;
   justify-content: center;
@@ -270,38 +229,6 @@ footer > p {
 @media screen and (min-width: 1400px) {
   #intro h2 {
     font-size: 1.5vw;
-  }
-}
-#intro button {
-  margin-top: 20px;
-  background: linear-gradient(350deg, #9356DC, #bc95e9);
-  border-radius: 50px;
-  border: none;
-  color: white;
-  padding: 20px 30px;
-  font-size: 4vw;
-  box-shadow: 0 0 15px 5px #99E2D0;
-  cursor: pointer;
-  opacity: 1;
-}
-#intro button:hover {
-  opacity: 0.9;
-  box-shadow: 0 0 5px 5px #99E2D0;
-  transition: all 200ms ease-in-out;
-}
-@media screen and (min-width: 760px) {
-  #intro button {
-    font-size: 3vw;
-  }
-}
-@media screen and (min-width: 1020px) {
-  #intro button {
-    font-size: 2vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  #intro button {
-    font-size: 1.2vw;
   }
 }
 
@@ -439,7 +366,7 @@ footer > p {
 .places__card {
   padding: 0 0 30px 0;
   margin: 0;
-  /*img modifier creation loop*/
+  /*This loop generates img selectors with different modifiers*/
 }
 @media screen and (min-width: 760px) {
   .places__card {
@@ -708,37 +635,6 @@ footer > p {
   }
 }
 
-.rest-header a {
-  font-size: 5vw;
-  flex: 1;
-  margin-left: 30px;
-}
-@media screen and (min-width: 760px) {
-  .rest-header a {
-    font-size: 3.5vw;
-    flex: 2;
-    margin-left: 50px;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .rest-header a {
-    font-size: 2vw;
-  }
-}
-.rest-header p {
-  flex: 3;
-}
-@media screen and (min-width: 760px) {
-  .rest-header p {
-    flex: 3.5;
-  }
-}
-@media screen and (min-width: 1020px) {
-  .rest-header p {
-    flex: 3;
-  }
-}
-
 figure {
   z-index: -1;
   position: relative;
@@ -762,6 +658,18 @@ figure img {
 @media screen and (min-width: 1400px) {
   figure img {
     object-position: center 62%;
+  }
+}
+
+#note-img img {
+  height: 330px;
+  object-fit: cover;
+  object-position: center 70%;
+}
+@media screen and (min-width: 760px) {
+  #note-img img {
+    height: 100%;
+    object-position: center 20%;
   }
 }
 
@@ -871,6 +779,7 @@ figure img {
   border-radius: 20px;
   box-shadow: 0 0 20px #99E2D0;
   overflow: hidden;
+  /*This loop generates the animation for .menu__option with a different delay and modifiers*/
 }
 .rest-container__menu__option i {
   color: #99E2D0;
@@ -1062,6 +971,112 @@ figure img {
     font-size: 1vw;
   }
 }
+
+.loader {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #99E2D0;
+  animation: fade 3000ms ease-in-out forwards;
+}
+.loader__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.loader__inner__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader__inner__content span {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border-width: 4px;
+  border-color: #FF79DA;
+  border-top-color: #9356DC;
+  animation: spin 3000ms ease-in-out forwards;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes fade {
+  0%, 20%, 40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0;
+    z-index: 2;
+  }
+  100% {
+    opacity: 0;
+    z-index: -2;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(360deg);
+  }
+  60% {
+    transform: rotate(1080deg);
+  }
+  80% {
+    transform: rotate(1440deg);
+  }
+  100% {
+    transform: rotate(1800deg);
+    z-index: -2;
+  }
+}
+#intro button {
+  margin-top: 20px;
+  background: linear-gradient(350deg, #9356DC, #bc95e9);
+  border-radius: 50px;
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  font-size: 4vw;
+  box-shadow: 0 0 15px 5px #99E2D0;
+  cursor: pointer;
+  opacity: 1;
+}
+#intro button:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 5px 5px #99E2D0;
+  transition: all 200ms ease-in-out;
+}
+@media screen and (min-width: 760px) {
+  #intro button {
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width: 1020px) {
+  #intro button {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #intro button {
+    font-size: 1.2vw;
+  }
+}
+
 .rest-container__btn {
   align-self: center;
   width: 40%;
@@ -1092,18 +1107,6 @@ figure img {
     font-size: 1.5vw;
     width: 20%;
     margin-top: 50px;
-  }
-}
-
-#note-img img {
-  height: 330px;
-  object-fit: cover;
-  object-position: center 70%;
-}
-@media screen and (min-width: 760px) {
-  #note-img img {
-    height: 100%;
-    object-position: center 20%;
   }
 }
 
