@@ -1,0 +1,43 @@
+header {
+    @include flex-center-x2;
+    p {
+        font-family:  shrikhand, cursive;
+        font-size: 7.5vw;
+        margin: 0;
+        padding: 10px 0;
+        @media screen and (min-width:760px) {
+            font-size: 4vw;
+        }
+        @media screen and (min-width:1020px) {
+            font-size: 3vw;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 2.5vw;
+        }
+    }
+}
+
+.rest-header {
+    a {
+        font-size: 5vw;
+        flex: 1;
+        margin-left: 30px;
+        @media screen and (min-width:760px) {
+            font-size: 3.5vw;
+            flex: 2;
+            margin-left: 50px;
+        }
+        @media screen and (min-width:1400px) {
+            font-size: 2vw;
+        }
+    }
+    p {
+        flex: 3;
+        @media screen and (min-width:760px) {
+            flex: 3.5;
+        }
+        @media screen and (min-width:1020px) {
+            flex: 3;
+        }
+    }
+}

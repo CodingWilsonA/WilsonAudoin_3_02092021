@@ -3,7 +3,14 @@
 @import "../Utils/variables";
 @import "../Utils/mixins";
 @import "../Base/global";
-@import "../Layout/header";
+@import "../Layout/headers";
 @import "../Layout/footer";
-@import "../Pages/home";
-@import "../Pages/menu";
+@import "../Pages/home-location";
+@import "../Pages/home-intro";
+@import "../Pages/home-container";
+@import "../Pages/home-guide";
+@import "../Pages/home-places";
+@import "../Pages/menu-figure";
+@import "../Pages/menu-rest-container";
+@import "../Components/home-spinner";
+@import "../Components/buttons";

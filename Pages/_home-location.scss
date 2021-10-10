@@ -1,0 +1,32 @@
+.loc {
+    @include flex-center-x2;
+    font-size: 4.5vw;
+    background-color: $light-tert-clr;
+    position: relative;
+    @media screen and (min-width:760px) {
+        font-size: 3vw;
+    }
+    @media screen and (min-width:1020px) {
+        font-size: 2vw;
+    }
+    @media screen and (min-width:1400px) {
+        font-size: 1.5vw;
+    }
+    &__mark {
+        margin-right: 3vw;
+        @media screen and (min-width:1020px) {
+            margin-right: 1.5vw;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        height: 6px;
+        background: linear-gradient($tertiary-clr, $light-tert-clr);
+    }
+}
