@@ -1,0 +1,13 @@
+/*Global color charts variables*/
+$primary-clr: #9356DC;
+$secondary-clr: #FF79DA;
+$dark-second-clr: darken($secondary-clr, 30%);
+$tertiary-clr: #99E2D0;
+$dark-tert-clr: darken($tertiary-clr, 20%);
+$light-tert-clr: lighten($tertiary-clr, 15%);
+$lighter-tert-clr: lighten($tertiary-clr, 20%);
+/*Home img loop variable*/
+$img-numb: 1;
+/*Menu options loop variables*/
+$opt-numb: 1;
+$anim-delay: 0ms;
