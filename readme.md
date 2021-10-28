@@ -9,53 +9,67 @@
  Ohmyfood! est une jeune startup qui voudrait s'imposer sur le marché de la restauration. L'objectif est de développer un site 100% mobile qui répertorie les menus de restaurants gastronomiques. En plus des systèmes classiques de réservation, les clients pourront composer le menu de leur repas pour que les plats soient prêts à leur arrivée.
 
  ### Project tree
- * img
-    * delice-sens.jpg
-    * la-francaise.jpg
-    * note-enchantee.jpg
-    * palette-gout.jpg
 
-* public
-    * css
-        * prefixed
-            * style.css
-        * style.css
-        * style.css.map
-
-* Sass
-    * Base
-        * _global.scss
-    * Components
-        * _buttons.scss
-        * _home-spinner.scss
-    * Layout
-        * _footer.scss
-        * _headers.scss
-    * Pages
-        * _home-container.scss
-        * _home-guide.scss
-        * _home-intro.scss
-        * _home-location.scss
-        * _home-places.scss
-        * _menu-figure.scss
-        * _menu-rest-container.scss
-    * Utils
-        * _mixins.scss
-        * _variables.scss
-    * styles.scss
-
-* zoning
-    * Accueil.png
-    * Menu-francaise.png
-
-* delice-sens.html
-* index.html
-* menu-francaise.html
-* note-enchantee.html
-* package.json
-* palette-gout.html
-* readme.md
-
+```
+|   delice-sens.html
+|   index.html
+|   menu-francaise.html
+|   note-enchantee.html
+|   package-lock.json
+|   package.json
+|   palette-gout.html
+|   readme.md
+|
++---img
+|       delice-sens.jpg
+|       la-francaise.jpg
+|       note-enchantee.jpg
+|       palette-gout.jpg
+|
++---public
+|   \---css
+|       |   style.css
+|       |   style.css.map
+|       |
+|       \---prefixed
+|               style.css
+|
++---Sass
+|   |   styles.scss
+|   |
+|   +---Base
+|   |       _global.scss
+|   |
+|   +---Components
+|   |       _buttons.scss
+|   |       _home-spinner.scss
+|   |
+|   +---Layout
+|   |       _footer.scss
+|   |       _headers.scss
+|   |
+|   +---Pages
+|   |       _home-container.scss
+|   |       _home-guide.scss
+|   |       _home-intro.scss
+|   |       _home-location.scss
+|   |       _home-places.scss
+|   |       _menu-figure.scss
+|   |       _menu-rest-container.scss
+|   |
+|   \---Utils
+|           _mixins.scss
+|           _variables.scss
+|
+\---zoning
+        Accueil.png
+        Menu - À la française.png
+        Menu - La note enchantée.png
+        Menu - La palette du goût.png
+        Menu - Le délice des sens.png
+        menu-delice.png
+        Menu-francaise.png
+```
 ### How to
 Reprend le Project tree pour détailler certains points importants.
 
