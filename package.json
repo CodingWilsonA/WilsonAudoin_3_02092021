@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/CodingWilsonA/WilsonAudoin_3_02092021/issues"
   },
-  "homepage": "https://github.com/CodingWilsonA/WilsonAudoin_3_02092021#readme"
+  "homepage": "https://github.com/CodingWilsonA/WilsonAudoin_3_02092021#readme",
+  "devDependencies": {
+    "postcss": "^8.3.11",
+    "sass": "^1.43.4"
+  }
 }
