@@ -11,14 +11,16 @@
  ### Project tree
 
 ```
-|   delice-sens.html
 |   index.html
-|   menu-francaise.html
-|   note-enchantee.html
-|   package-lock.json
 |   package.json
-|   palette-gout.html
 |   readme.md
+|
++---html
+|       delice-sens.html
+|       index.html
+|       menu-francaise.html
+|       note-enchantee.html
+|       palette-gout.html
 |
 +---img
 |       delice-sens.jpg
