@@ -4,7 +4,7 @@
     <title>ohmyfood</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=1, minimum-scale=0.86">
-    <link rel="stylesheet" type="text/css" href="public/css/prefixed/style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/prefixed/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         <p>ohmyfood</p>
     </header>
-    <figure>
-        <img src="img/la-francaise.jpg" alt="Photo du restaurant À la française">
+    <figure id="note-img">
+        <img src="img/note-enchantee.jpg" alt="Photo du restaurant La Note Enchantée">
     </figure>
     <section class="rest-container">
         <div class="rest-container__heading">
-            <h2>À la française</h2>
+            <h2>La note enchantée</h2>
             <div class="places__card__info__icon">
                 <input type="checkbox" class="places__card__info__icon__box" name="heart-box">
                 <svg class="places__card__info__icon__main" version="1.1" viewBox="0 0 512 512">
@@ -39,11 +39,11 @@
             ENTRÉES
         </p>
         <div class="rest-container__divider"></div>
-        <ul class="rest-container__menu">
-            <li class="rest-container__menu__option rest-container__menu__option--1">
-                <div class="rest-container__menu__option__txt">
-                    <h3>Tartare de poulpe acidulé</h3>
-                    <p>Aux zests d'orange</p>
+        <ul class="rest-container__menu rest-container__menu--note">
+            <li class="rest-container__menu__option rest-container__menu__option--note rest-container__menu__option--1">
+                <div class="rest-container__menu__option__txt rest-container__menu__option__txt--note">
+                    <h3>Ravioles de foie gras</h3>
+                    <p>Accompagnés de leur crème à la truffe</p>
                 </div>
                 <p>25€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -51,10 +51,10 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--2">
-                <div class="rest-container__menu__option__txt">
-                    <h3>Velouté de légumes d'antan</h3>
-                    <p>Carotte, panais, topinambour</p>
+            <li class="rest-container__menu__option rest-container__menu__option--note rest-container__menu__option--2">
+                <div class="rest-container__menu__option__txt rest-container__menu__option__txt--note">
+                    <h3>Caviar osciètre</h3>
+                    <p>Sur blini à la farine de blé noir</p>
                 </div>
                 <p>35€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -62,12 +62,23 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--3">
-                <div class="rest-container__menu__option__txt">
-                    <h3>Soupe à l'oignon</h3>
-                    <p>Revisitée</p>
+            <li class="rest-container__menu__option rest-container__menu__option--note rest-container__menu__option--3">
+                <div class="rest-container__menu__option__txt rest-container__menu__option__txt--note">
+                    <h3>Homard et espuma de...</h3>
+                    <p>Mariné aux zests d'orange</p>
                 </div>
                 <p>20€</p>
+                <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
+                <div class="rest-container__menu__option__check">
+                    <i class="fas fa-check"></i>
+                </div>
+            </li>
+            <li class="rest-container__menu__option rest-container__menu__option--note rest-container__menu__option--4">
+                <div class="rest-container__menu__option__txt rest-container__menu__option__txt--note">
+                    <h3>Foie gras de canard cuit entier</h3>
+                    <p>Confiture de figue et pain toasté</p>
+                </div>
+                <p>35€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
                 <div class="rest-container__menu__option__check">
                     <i class="fas fa-check"></i>
@@ -79,10 +90,10 @@
         </p>
         <div class="rest-container__divider"></div>
         <ul class="rest-container__menu">
-            <li class="rest-container__menu__option rest-container__menu__option--4">
+            <li class="rest-container__menu__option rest-container__menu__option--5">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Coquilles Saint-Jacques</h3>
-                    <p>Accompagnées d'une purée de panais</p>
+                    <h3>Noix de coquilles Saint-Jacques</h3>
+                    <p>Sur lit de purée de céleri-rave</p>
                 </div>
                 <p>40€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -90,10 +101,10 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--5">
+            <li class="rest-container__menu__option rest-container__menu__option--6">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Magret de canard</h3>
-                    <p>Et parmentier de pommes de terre</p>
+                    <h3>Langoustine poêlée</h3>
+                    <p>Purée de patate douce</p>
                 </div>
                 <p>35€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -101,10 +112,10 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--6">
+            <li class="rest-container__menu__option rest-container__menu__option--7">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Pigeonneau d'Ille-et-Vilaine</h3>
-                    <p>Sur son lit de gnocchis aux légumes</p>
+                    <h3>Mijoté de queue de boeuf</h3>
+                    <p>Et riz sauvage aux zests de citron</p>
                 </div>
                 <p>44€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -118,10 +129,10 @@
         </p>
         <div class="rest-container__divider"></div>
         <ul class="rest-container__menu">
-            <li class="rest-container__menu__option rest-container__menu__option--7">
+            <li class="rest-container__menu__option rest-container__menu__option--8">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Pétales de violettes glacés</h3>
-                    <p>Et purée de noisettes</p>
+                    <h3>Macaron noisette et chocolat</h3>
+                    <p>Glace au caramel brun et sel de Guérande</p>
                 </div>
                 <p>18€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -129,10 +140,10 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--8">
+            <li class="rest-container__menu__option rest-container__menu__option--9">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Fondant au chocolat</h3>
-                    <p>Revisité</p>
+                    <h3>Baba au rhum revisité</h3>
+                    <p>Avec son coulis de citron</p>
                 </div>
                 <p>22€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">
@@ -140,10 +151,10 @@
                     <i class="fas fa-check"></i>
                 </div>
             </li>
-            <li class="rest-container__menu__option rest-container__menu__option--9">
+            <li class="rest-container__menu__option rest-container__menu__option--10">
                 <div class="rest-container__menu__option__txt">
-                    <h3>Millefeuille croustillant</h3>
-                    <p>Myrtilles et pâte d'amande</p>
+                    <h3>Tarte au citron meringuée</h3>
+                    <p>Destructurée</p>
                 </div>
                 <p>23€</p>
                 <input type="checkbox" class="rest-container__menu__option__box" name="check-box">

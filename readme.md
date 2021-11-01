@@ -73,10 +73,15 @@
 ### How to
 Reprend le Project tree pour détailler certains points importants.
 
-
 * Sass
 
 Les partiels sont importés vers styles.scss qui est compilé vers public/style.css puis préfixé dans public/prefixed/style.css
+Commandes à entrer dans le terminal pour intégrer les modifications apportées au code : 
+1/ npm i -D sass
+2/ npm i -D postcss
+3/ npm run sass
+4/ Arrêter le script sass
+5/ npm run prefix
 
     * Pages
     Le code scss des pages est découpé selon les blocs html principaux du body de chaque page.
@@ -88,4 +93,4 @@ Les partiels sont importés vers styles.scss qui est compilé vers public/style.
     L'affichage des plats est généré par une boucle while. Celle-ci génère aussi une animation dont le départ et retardé d'avantage à chaque itération d'un élément modifié via la syntaxe d'interpolation.
 
 * zoning
-Deux zonings du projet. Ce sont des prototypes de la structure html et BEM. Seulement deux exemples car les 4 pages des menus sont identiques en termes d'affichage.
+Deux zonings du projet. Ce sont des prototypes de la structure HTML et CSS BEM (Block Element Modifier). Seulement deux exemples car les 4 pages des menus sont identiques en termes d'affichage.
